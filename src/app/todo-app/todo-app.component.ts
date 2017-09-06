@@ -1,19 +1,20 @@
-import {Component} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import {Todo} from '../todo';
 import {TodoService} from '../todo.service';
 
 @Component({
-  moduleId: module.id,
   selector: 'todo-app',
-  templateUrl: 'todo-app.component.html',
-  styleUrls: ['todo-app.component.css'],
-  providers: [TodoService]
+  templateUrl: './todo-app.component.html',
+  styleUrls: ['./todo-app.component.css']
 })
-export class TodoAppComponent {
+export class TodoAppComponent implements OnInit {
 
   newTodo: Todo = new Todo();
 
-  constructor(private todoService: TodoService) {
+  constructor(private todoService: TodoService) { }
+
+  ngOnInit() {
   }
 
   addTodo() {
@@ -32,5 +33,4 @@ export class TodoAppComponent {
   get todos() {
     return this.todoService.getAllTodos();
   }
-
 }

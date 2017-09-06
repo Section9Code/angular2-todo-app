@@ -1,26 +1,25 @@
-/* tslint:disable:no-unused-variable */
-
-import { By }           from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
-
-import {
-  beforeEach, beforeEachProviders,
-  describe, xdescribe,
-  expect, it, xit,
-  async, inject
-} from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TodoAppComponent } from './todo-app.component';
-import { TodoService } from '../todo.service';
 
-beforeEachProviders(() => [TodoAppComponent, TodoService]);
+describe('TodoAppComponent', () => {
+  let component: TodoAppComponent;
+  let fixture: ComponentFixture<TodoAppComponent>;
 
-describe('Component: TodoApp', () => {
-
-  it('should create an instance', inject([TodoService], (todoService: TodoService) => {
-    let component = new TodoAppComponent(todoService);
-    expect(component).toBeTruthy();
-    expect(component).toBeTruthy();
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [ TodoAppComponent ]
+    })
+    .compileComponents();
   }));
 
+  beforeEach(() => {
+    fixture = TestBed.createComponent(TodoAppComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should be created', () => {
+    expect(component).toBeTruthy();
+  });
 });
