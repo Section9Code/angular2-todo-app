@@ -1,0 +1,2 @@
+default: FIG_NEWTON_FILE=local.yml -p base -f html -o report/report.html BROWSER=chrome
+base: -r features --tag ~@wip --tag ~@skip --format pretty

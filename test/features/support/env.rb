@@ -1,0 +1,12 @@
+require 'capybara'
+require 'capybara/dsl'
+require 'capybara/cucumber'
+require 'cucumber'
+require 'fig_newton'
+require 'pry'
+require 'require_all'
+require 'rspec'
+require 'selenium-webdriver'
+require 'site_prism'
+
+require_all 'lib'

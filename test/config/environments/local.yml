@@ -1,0 +1,4 @@
+# Here is where we store parameters/variables for each environment
+base_url: http://localhost:4200
+screenshots_dir: report/local/
+env: Local
