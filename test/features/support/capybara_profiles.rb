@@ -11,6 +11,8 @@ end
 Capybara.default_driver = case ENV['BROWSER']
                             when 'chrome'
                               :chrome
+                            when 'chrome_headless'
+                              :chrome_headless
                             when 'firefox'
                               :firefox
                             else
@@ -22,6 +24,12 @@ Capybara.register_driver :chrome do |app|
   puts 'Running using Chrome'
   Capybara::Selenium::Driver.new(app, :browser => :chrome,
                                  :options => Selenium::WebDriver::Chrome::Options.new(:args => %w[--screen-size=1366,768]))
+  end
+
+Capybara.register_driver :chrome_headless do |app|
+  puts 'Running using Chrome Headless'
+  Capybara::Selenium::Driver.new(app, :browser => :chrome,
+                                 :options => Selenium::WebDriver::Chrome::Options.new(:args => %w[headless]))
 end
 
 Capybara.register_driver :firefox do |app|

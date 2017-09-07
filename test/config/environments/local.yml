@@ -2,3 +2,11 @@
 base_url: http://localhost:4200
 screenshots_dir: report/local/
 env: Local
+todo_list:
+  - Passport
+  - Boarding Pass
+  - Money
+  - Food
+  - Drink
+  - Pillow
+  - Mobile Phone
