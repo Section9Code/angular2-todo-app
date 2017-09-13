@@ -28,7 +28,7 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome'], // Add 'Chrome' to run tests in browser
+    browsers: ['ChromeHeadless'], // Add 'Chrome' to run tests in browser
     singleRun: false
   });
 };
