@@ -1,2 +1,2 @@
-default: FIG_NEWTON_FILE=local.yml -p base -f html -o report/report.html BROWSER=chrome_headless
+default: FIG_NEWTON_FILE=local.yml -p base -f json -o report/report.json BROWSER=chrome_headless
 base: -r features --tag ~@wip --tag ~@skip --format pretty
