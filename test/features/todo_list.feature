@@ -33,3 +33,8 @@ Feature: Todo list
       | 2      |
       | 4      |
       | 7      |
+
+#  Scenario: The one where we have multiple todo's and complete one
+#    And I create "3" todo's
+#    When I mark the todo as "complete"
+#    Then I should see "2 items left (1 complete)" in the footer
