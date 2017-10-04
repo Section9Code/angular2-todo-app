@@ -45,6 +45,21 @@ export class TodoService {
     return this.todos;
   }
 
+  getCompleteTodos(): Todo[] {
+    var completeTodos : Todo[];
+    completeTodos = [];
+
+    for(var i =0; i< this.todos.length; i++)
+    {
+      if(this.todos[i].complete)
+      {
+        completeTodos.push(this.todos[i]);
+      }
+    }
+
+    return completeTodos;
+  }
+
   // Simulate GET /todos/:id
   getTodoById(id: number): Todo {
     return this.todos

@@ -33,4 +33,8 @@ export class TodoAppComponent implements OnInit {
   get todos() {
     return this.todoService.getAllTodos();
   }
+
+  get completeTodos() {
+    return this.todoService.getCompleteTodos();
+  }
 }
