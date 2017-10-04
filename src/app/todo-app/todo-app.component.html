@@ -15,8 +15,8 @@
     </ul>
   </section>
   <footer class="footer" *ngIf="todos.length > 0">
-      <span class="todo-count"><strong>{{todos.length}}</strong> {{todos.length == 1 ? 'item' : 'items'}} left</span>  
-    <!-- <span class="todo-count"><strong>{{todos.length - completeTodos.length}}</strong> {{todos.length == 1 ? 'item' : 'items'}} left ({{ completeTodos.length }} complete)</span>  -->
+      <!-- <span class="todo-count"><strong>{{todos.length}}</strong> {{todos.length == 1 ? 'item' : 'items'}} left</span>   -->
+    <span class="todo-count"><strong>{{todos.length - completeTodos.length}}</strong> {{todos.length == 1 ? 'item' : 'items'}} left ({{ completeTodos.length }} complete)</span> 
     <br/>
   </footer>
 </section>
