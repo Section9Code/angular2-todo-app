@@ -65,6 +65,6 @@ Then(/^I should see "([^"]*)" todo's in the list$/) do |number|
   expect(todo.base.todo_count.text[/\d/].to_i).to eq(number.to_i)
 end
 
-# Then(/^I should see "([^"]*)" in the footer$/) do |arg1|
-#   expect(todo.base.todo_count.text).to eq(arg1)
-# end
+ Then(/^I should see "([^"]*)" in the footer$/) do |arg1|
+   expect(todo.base.todo_count.text).to eq(arg1)
+ end
